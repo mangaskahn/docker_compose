@@ -11,8 +11,8 @@ services:
     - mariadb_data:
         driver_opts:
           type: nfs 
-          o: addr=10.32.10.11
-          device: :/mnt/LFFPool/AV/config/mariadb
+          o: "addr=10.32.10.11"
+          device: ":/mnt/LFFPool/AV/config/mariadb"
     ports:
       - 3306:3306
       
