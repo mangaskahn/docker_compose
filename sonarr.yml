@@ -9,6 +9,7 @@ services:
       - PGID=117
       - TZ=America/Detroit
     volumes:
+      - /media/config/sonarr:/config
       - /media:/media
     ports:
       - 8989:8989
