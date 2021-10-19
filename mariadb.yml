@@ -21,7 +21,7 @@ services:
       - 8080:8080
 
 volumes:      
-  mariadb:
+  mariadb_data:
     driver_opts:
       type: "nfs"
       o: "addr=10.32.10.11,rw,noatime"
