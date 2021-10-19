@@ -1,0 +1,18 @@
+---
+version: "2.1"
+services:
+  sonarr:
+    image: lscr.io/linuxserver/sonarr
+    container_name: sonarr
+    environment:
+      - PUID=111
+      - PGID=117
+      - TZ=America/Detroit
+    volumes:
+      - /media/config/sonarr:/config
+      - /media/TV:/media/tv 
+      - /media/Inbound:/media/inbound 
+    ports:
+      - 8989:8989
+    restart: unless-stopped
+...
