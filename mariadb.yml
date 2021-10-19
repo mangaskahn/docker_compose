@@ -9,6 +9,7 @@ services:
       MYSQL_ROOT_PASSWORD: Oct1982!!
     volumes:
       - /media/config/mariadb:/var/lib/mysql
+      external: true
     ports:
       - 3306:3306
       
