@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  apache:
+    image: 'bitnami/apache:latest'
+    ports:
+      - '80:80'
+      - '443:443'
+  letsencrypt:
+    image: 'blacklabelops/letsencrypt'
+    volumes:
+    - /media/config/letsencrypt/certs:/etc/letsencrypt
+    - /media/config/letsencrypt/challenges:/var/www/letsencrypt
+    environment:
+    - LETSENCRYPT_WEBROOT_MODE: "true"
+    - LETSENCRYPT_EMAIL: "support@waynetec.us"
+    - LETSENCRYPT_DOMAIN1: "waynetec.us"  
