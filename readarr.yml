@@ -9,7 +9,7 @@ services:
       - PGID=117
       - TZ=America/Detroit
     volumes:
-      - /media/config/readarr:/config
+      - /config/readarr:/config
       - /media:/media
     ports:
       - 8787:8787
