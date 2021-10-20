@@ -1,0 +1,16 @@
+---
+version: "3"
+services:
+  readarr:
+    image: ghcr.io/linuxserver/readarr
+    container_name: readarr
+    environment:
+      - PUID=111
+      - PGID=117
+      - TZ=America/Detroit
+    volumes:
+      - /media/config/readarr:/config
+      - /media:/media
+    ports:
+      - 8787:8787
+    restart: unless-stopped
