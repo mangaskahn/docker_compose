@@ -9,7 +9,7 @@ services:
       - PGID=117
       - TZ=America/Detroit
     volumes:
-      - /media/config/lidarr:/config
+      - /config/lidarr:/config
       - /media:/media
     ports:
       - 8686:8686
