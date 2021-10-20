@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  apache:
+    image: 'ubuntu/apache2'
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - /media/config/apache-int/conf:/etc/apache2
+      - /media/config/apache-int/web:/var/www/html
