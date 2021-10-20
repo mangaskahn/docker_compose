@@ -4,7 +4,7 @@ services:
   truecommand:
     image: ixsystems/truecommand
     volumes:
-      - /media/config/truecommand:/data
+      - /config/truecommand:/data
     ports:
       - 8880:80 
       - 8843:443 
