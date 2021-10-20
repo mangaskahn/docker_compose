@@ -1,0 +1,10 @@
+---
+version: "3"
+services:
+  truecommand:
+    imange: ixsystems/truecommand
+    volumes:
+      - /media/config/truecommand:/data
+    port:
+      - 8880:80 
+      - 8843:443 
