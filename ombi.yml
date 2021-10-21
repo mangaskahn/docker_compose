@@ -1,0 +1,16 @@
+---
+version: "3.0"
+services:
+  ombi:
+    image: lscr.io/linuxserver/ombi
+    container_name: ombi
+    environment:
+      - PUID=111
+      - PGID=117
+      - TZ=America/Detroit
+      #- BASE_URL=/ombi #optional
+    volumes:
+      - /config/ombi:/config
+    ports:
+      - 3579:3579
+    restart: unless-stopped
