@@ -3,6 +3,9 @@ version: "3"
 services:
   truecommand:
     image: ixsystems/truecommand
+    environment:
+      - PUID=111
+      - PGID=117
     volumes:
       - /config/truecommand:/data
     ports:
