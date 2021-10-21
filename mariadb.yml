@@ -1,28 +1,22 @@
-version: '3.1'
-
+---
+version: "3.0"
 services:
-
-  db:
-    image: mariadb
-    restart: always
+  mariadb:
+    image: lscr.io/linuxserver/mariadb
+    container_name: mariadb
     environment:
-      MYSQL_ROOT_PASSWORD: Oct1982!!
-      
+      - PUID=111
+      - PGID=117
+      - MYSQL_ROOT_PASSWORD=Oct1982!!
+      - TZ=America/Detroit
     volumes:
-    - mariadb_data:/var/lib/mysql
-    
+      - /config/mariadb:/config
     ports:
       - 3306:3306
+    restart: unless-stopped
       
   adminer:
     image: adminer
     restart: always
     ports:
       - 8080:8080
-
-volumes:      
-  mariadb_data:
-    driver_opts:
-      type: "nfs"
-      o: "addr=10.32.10.11,rw,noatime,no_root_squash,vers=3"
-      device: ":/mnt/LFFPool/AV/config/mariadb"
