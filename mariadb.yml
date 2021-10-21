@@ -7,7 +7,7 @@ services:
     environment:
       - PUID=111
       - PGID=117
-      - MYSQL_ROOT_PASSWORD=Oct1982!!
+      - MYSQL_ROOT_PASSWORD=Oct191982
       - TZ=America/Detroit
     volumes:
       - /config/mariadb:/config
