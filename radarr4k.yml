@@ -1,5 +1,5 @@
 ---
-version: "3"
+version: "3.0"
 services:
   radarr:
     image: lscr.io/linuxserver/radarr
@@ -14,3 +14,4 @@ services:
     ports:
       - 7879:7878
     restart: unless-stopped
+...
