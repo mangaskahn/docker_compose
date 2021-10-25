@@ -1,4 +1,5 @@
 ---
+version: "3"
 gitlab:
   image: 'gitlab/gitlab-ce'
   restart: unless-stopped
