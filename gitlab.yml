@@ -9,9 +9,9 @@ services:
       - PUID=111
       - PGID=117
       - TZ=America/Detroit
-      GITLAB_OMNIBUS_CONFIG: |
-        external_url 'https://gitlab.waynetec.us'
-        # Add any other gitlab.rb configuration here, each on its own line
+      - GITLAB_OMNIBUS_CONFIG: |
+          external_url 'https://gitlab.waynetec.us'
+          # Add any other gitlab.rb configuration here, each on its own line
     ports:
       - '10088:80'
       - '10443:443'
