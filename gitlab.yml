@@ -1,3 +1,4 @@
+---
 gitlab:
   image: 'gitlab/gitlab-ce'
   restart: unless-stopped
@@ -16,3 +17,4 @@ gitlab:
     - '/config/gitlab/config:/etc/gitlab'
     - '/config/gitlab/logs:/var/log/gitlab'
     - '/config/gitlab/data:/var/opt/gitlab'
+...
