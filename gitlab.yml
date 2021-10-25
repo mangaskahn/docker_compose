@@ -1,7 +1,7 @@
 gitlab:
   image: 'gitlab/gitlab-ce'
   restart: unless-stopped
-  hostname: 'gitlab'
+  container_name: 'gitlab'
   environment:
     GITLAB_OMNIBUS_CONFIG: |
       external_url 'https://gitlab.waynetec.us'
