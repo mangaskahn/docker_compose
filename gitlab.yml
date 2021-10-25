@@ -2,7 +2,7 @@ gitlab:
   image: 'gitlab/gitlab-ce'
   restart: unless-stopped
   container_name: 'gitlab'
-  environment
+  environment:
     - PUID=111
     - PGID=117
     - TZ=America/Detroit
