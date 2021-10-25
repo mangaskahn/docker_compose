@@ -2,10 +2,10 @@ gitlab:
   image: 'gitlab/gitlab-ce'
   restart: unless-stopped
   container_name: 'gitlab'
-  environment:
-      - PUID=111
-      - PGID=117
-      - TZ=America/Detroit
+  environment
+    - PUID=111
+    - PGID=117
+    - TZ=America/Detroit
     GITLAB_OMNIBUS_CONFIG: |
       external_url 'https://gitlab.waynetec.us'
       # Add any other gitlab.rb configuration here, each on its own line
