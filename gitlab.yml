@@ -1,0 +1,16 @@
+gitlab:
+  image: 'gitlab/gitlab-ce'
+  restart: unless-stopped
+  hostname: 'gitlab'
+  environment:
+    GITLAB_OMNIBUS_CONFIG: |
+      external_url 'https://gitlab.waynetec.us'
+      # Add any other gitlab.rb configuration here, each on its own line
+  ports:
+    - '10088:80'
+    - '10443:443'
+    - '10022:22'
+  volumes:
+    - '/config/gitlab/config:/etc/gitlab'
+    - '/config/gitlab/logs:/var/log/gitlab'
+    - '/config/gitlab/data:/var/opt/gitlab'
