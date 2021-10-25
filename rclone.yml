@@ -14,3 +14,4 @@ services:
     ports:
       - 8780:80
     restart: unless-stopped
+...
