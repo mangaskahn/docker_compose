@@ -1,0 +1,16 @@
+---
+version: "3.0"
+services:
+  mycroft:
+    image: mycroftai/docker-mycroft
+    container_name: mycroft
+    environment:
+      - PULSE_SERVER=unix:${XDG_RUNTIME_DIR}/pulse/native
+      - PUID=111
+      - PGID=117
+      - TZ=America/Detroit
+    volumes:
+      - /config/mycroft:/config
+      - ${XDG_RUNTIME_DIR}/pulse/native:${XDG_RUNTIME_DIR}/pulse/native
+      ports:
+      - 8181:8181
