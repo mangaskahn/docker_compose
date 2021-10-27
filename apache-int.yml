@@ -7,5 +7,5 @@ services:
       - '80:80'
       - '443:443'
     volumes:
-      - /media/config/apache-int/conf:/etc/apache2
-      - /media/config/apache-int/web:/var/www/html
+      - /config/apache-int/conf:/etc/apache2
+      - /config/apache-int/web:/var/www/html
