@@ -12,5 +12,7 @@ services:
     volumes:
       - /config/mycroft:/config
       - "${XDG_RUNTIME_DIR}/pulse/native":"${XDG_RUNTIME_DIR}/pulse/native"
-      ports:
+    ports:
       - 8181:8181
+    devices:
+      - /dev/snd
