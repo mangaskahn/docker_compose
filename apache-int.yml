@@ -12,4 +12,4 @@ services:
       - '443:443'
     volumes:
       - /config/apache-int/conf:/config
-      - /config/apache-int/web:/var/www/html
+      - /config/apache-int/web:/web
