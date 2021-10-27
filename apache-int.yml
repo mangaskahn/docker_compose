@@ -11,5 +11,5 @@ services:
       - '80:80'
       - '443:443'
     volumes:
-      - /config/apache-int/conf:/etc/apache2
+      - /config/apache-int/conf:/config
       - /config/apache-int/web:/var/www/html
