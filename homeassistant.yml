@@ -1,0 +1,22 @@
+version: '3'
+services:
+  homeassistant:
+    deploy:
+        placement:
+          constraints:
+            - "node.platform.arch==aarch64"
+    container_name: homeassistant
+    image: "ghcr.io/home-assistant/raspberrypi4-homeassistant:stable"
+    environment:
+      DISABLE_JEMALLOC: true
+      PGID: 117
+      PUID: 111
+    volumes:
+      - /piconfig:/config
+      - /etc/localtime:/etc/localtime:ro
+    restart: unless-stopped
+    privileged: true
+    network_mode: host
+    devices:
+      - /dev/serial/by-id/usb-Silicon_Labs_CP2102N_USB_to_UART_Bridge_Controller_b6050b055245eb11a3eaaa52b003b68c-if00-port0
+    
