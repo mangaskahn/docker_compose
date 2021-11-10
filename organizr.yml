@@ -7,8 +7,6 @@ services:
       - PUID=111
       - PGID=117
       - TZ=America/Detroit
-      - fpm="false"
-      - branch="v2-master"
     volumes:
       - /config/organizr:/config
     ports:
