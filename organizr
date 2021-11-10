@@ -1,0 +1,16 @@
+---
+version: "3.0"
+services:
+  organizr:
+    image: organizr/organizr
+    environment:
+      - PUID=111
+      - PGID=117
+      - TZ=America/Detroit
+      - fpm="false"
+      - branch="v2-master"
+    volumes:
+      - /config/organizr:/config
+    ports:
+      - 80:80
+    restart: unless-stopped
