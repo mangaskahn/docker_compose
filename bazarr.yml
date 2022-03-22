@@ -7,7 +7,7 @@ services:
     environment:
       - PUID=111
       - PGID=117
-      - TZ=America\Detroit
+      - TZ=America/Detroit
     volumes:
       - /config/bazarr:/config
       - /media/Movies:/movies #optional
