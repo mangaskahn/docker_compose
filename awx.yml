@@ -27,7 +27,7 @@ services:
     hostname: awxweb
     user: root
     environment:
-      SECRET_KEY: aabbcc
+      SECRET_KEY: awxsecretkey
       DATABASE_USER: awx
       DATABASE_PASSWORD: awxpass
       DATABASE_NAME: awx
