@@ -10,5 +10,5 @@ services:
     volumes:
       - /config/organizr:/config
     ports:
-      - 80:80
+      - 8090:8090
     restart: unless-stopped
